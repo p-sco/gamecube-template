@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Launch Debug",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}/${workspaceFolderBasename}.dol",
+          "targetArchitecture": "arm",
+          "preLaunchTask": "gdb-debug",
+          "postDebugTask": "stop-emulation",
+          "serverLaunchTimeout": 10000,
+          "stopAtEntry": true,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": true,
+          "MIMode": "gdb",
+          "miDebuggerPath": "D:\\GameDev\\devkitPro\\devkitPPC\\bin\\powerpc-eabi-gdb.exe",
+          "miDebuggerServerAddress": "localhost:20000",
+          "setupCommands": [
+              {
+                  "description": "Enable pretty-printing",
+                  "text": "file ${workspaceFolder}/${workspaceFolderBasename}.dol -enable-pretty-printing",
+                  "ignoreFailures": true
+              }
+          ]
+      }
+  ]
+}

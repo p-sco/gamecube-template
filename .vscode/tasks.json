@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make debug",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "DEBUG=1"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "make release",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "DEBUG=0"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "clean",
+            "type": "process",
+            "command": "make",
+            "args": [
+                "clean"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Dolphin_run",
+            "type": "shell",
+            "command": "D:\\GameDev\\devkitPro\\examples\\gamecube\\dolphin-master-5.0-15445-x64\\Dolphin-x64\\Dolphin.exe", 
+            "args": ["-b", "-e", "${workspaceFolder}/${workspaceFolderBasename}.dol"],
+            "group": "test",
+            "isBackground": true
+        },
+        {
+            "label": "Dolphin_debug",
+            "type": "shell",
+            "command": "D:\\GameDev\\devkitPro\\examples\\gamecube\\dolphin-master-5.0-15445-x64\\Dolphin-x64\\Dolphin.exe",
+            "args": ["-d", "${workspaceFolder}/${workspaceFolderBasename}.dol"],
+            "group": "test",
+            "isBackground": true
+        }
+    ]
+}   

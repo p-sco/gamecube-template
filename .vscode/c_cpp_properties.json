@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "GCN",
+            "forcedInclude": ["D:\\GameDev\\devkitPro\\examples\\gamecube\\include\\vscode_fix.h"],
+            "includePath": [
+                "${workspaceFolder}",
+                // "${workspaceFolder}\\include\\**",
+                "D:\\GameDev\\devkitPro\\libogc\\include\\**",
+                "D:\\GameDev\\devkitPro\\devkitPPC\\powerpc-eabi\\include\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "_UNICODE",
+                "WIN32",
+                "ARM7",
+                "ARM9"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    // "${workspaceFolder}\\include\\**",
+                    "D:\\GameDev\\devkitPro\\libogc\\include\\**",
+                    "D:\\GameDev\\devkitPro\\devkitPPC\\powerpc-eabi\\include\\**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "D:\\GameDev\\devkitPro\\devkitPPC\\bin\\powerpc-eabi-g++.exe"
+        }
+    ],
+    "version": 4
+  }
