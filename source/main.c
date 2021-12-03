@@ -35,10 +35,18 @@ int main() {
 	printf("Hello World!\n");
 	
 	while(1) {
+
+		PAD_ScanPads();
 		u16 buttonsDown = PAD_ButtonsDown(0);
 	
 		if(buttonsDown & PAD_BUTTON_A) {
 			printf("Button A pressed.\n");
+		}
+
+		u16 buttonsHeld = PAD_ButtonsHeld(0);
+
+		if(buttonsHeld & PAD_BUTTON_A) {
+			printf("Button A held down");
 		}
 		
 		u16 buttonsUp = PAD_ButtonsUp(0);
@@ -55,7 +63,7 @@ int main() {
 			printf("Joystick moved down.\n");
 		}
 		
-		//
+		//Exits emulation when start is pressed
 		if(buttonsDown & PAD_BUTTON_START) {
 			exit(0);
 		}
